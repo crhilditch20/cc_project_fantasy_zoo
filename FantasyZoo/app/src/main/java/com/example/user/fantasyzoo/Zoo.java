@@ -33,6 +33,15 @@ public class Zoo {
     public int countAnimalsInHoldingPen(){
         return holdingPen.size();
     }
+
+    public Creature getAnimalFromHoldingPen(String name){
+        for (Creature animal : holdingPen){
+            if (animal.getName().equals(name)){
+               return animal;
+            }
+        }
+        return null;
+    }
 }
 
 

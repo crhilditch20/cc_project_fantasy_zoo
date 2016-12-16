@@ -39,4 +39,11 @@ public class ZooTest {
         int resultAfter = this.zoo.countAnimalsInHoldingPen();
         assertEquals(1,resultAfter);
     }
+
+    @Test
+    public void testGetFromHoldingPen(){
+        zoo.addAnimalToHoldingPen(dragon);
+        Creature animal = zoo.getAnimalFromHoldingPen("Smoky");
+        assertEquals("Smoky", animal.getName());
+    }
 }
