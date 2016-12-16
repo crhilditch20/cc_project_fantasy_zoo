@@ -18,7 +18,7 @@ public abstract class Creature {
         return "Zzzzz....";
     }
 
-    public String eat(){
+    public String eat(Food food){
         return "Nom nom nom...";
     }
 

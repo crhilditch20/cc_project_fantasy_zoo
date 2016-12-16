@@ -33,7 +33,8 @@ public class MermaidTest {
 
     @Test
     public void testCanEat(){
-        assertEquals("Nom nom nom...", mermaid.eat());
+        Food food = new Food("fish");
+        assertEquals("Nom nom nom...", mermaid.eat(food));
     }
 }
 

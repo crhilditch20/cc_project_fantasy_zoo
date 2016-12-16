@@ -36,19 +36,6 @@ public class Enclosure {
         animals.add(animal);
     }
 
-    public String addAnimalIfTerrainSuits(Creature animal){
-        String unsuitable = "The terrain in this enclosure is not suitable for this animal!";
-        String suitable = animal.getName() + " is settling into their new enclosure";
-        if (animal instanceof Flyable && this.terrain.get("Roof").equals("closed")){
-            animals.add(animal);
-            return suitable;
-        }
-        else if (animal instanceof Swimmable && this.terrain.get("Landscape").equals("water")){
-            animals.add(animal);
-            return suitable;
-        }
-        else return unsuitable;
-    }
 
 
 

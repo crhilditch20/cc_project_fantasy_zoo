@@ -38,6 +38,7 @@ public class DragonTest {
 
     @Test
     public void testCanEat(){
-        assertEquals("Nom nom nom...", dragon.eat());
+        Food food = new Food("meat");
+        assertEquals("Nom nom nom...", dragon.eat(food));
     }
 }

@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
@@ -43,6 +44,8 @@ public class EnclosureTest {
         testEnclosure.addAnimal(dragon);
         assertEquals(1, testEnclosure.countAnimals());
     }
+
+
 
 
 

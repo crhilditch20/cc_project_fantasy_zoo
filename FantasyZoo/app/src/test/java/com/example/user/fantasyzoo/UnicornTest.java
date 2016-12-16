@@ -33,6 +33,7 @@ public class UnicornTest {
 
     @Test
     public void testCanEat(){
-        assertEquals("Nom nom nom...", unicorn.eat());
+        Food food = new Food("vegetarian");
+        assertEquals("Nom nom nom...", unicorn.eat(food));
     }
 }
