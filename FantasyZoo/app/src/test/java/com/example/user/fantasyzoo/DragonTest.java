@@ -20,4 +20,14 @@ public class DragonTest {
     public void testGetName(){
         assertEquals("Smoky", dragon.getName());
     }
+
+    @Test
+    public void testCanFly(){
+        assertEquals("beats wings and kicks off into air", dragon.fly());
+    }
+
+    @Test
+    public void testCanBreatheFire(){
+        assertEquals("incinerates", dragon.breatheFire());
+    }
 }
