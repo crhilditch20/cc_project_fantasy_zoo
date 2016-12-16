@@ -25,8 +25,15 @@ public class Enclosure {
         return this.terrain;
     }
 
-    public void addAnimal(Creature animal){
-        containedAnimals.add(animal);
+    public void prohibitAnimal(Creature animal){
+        prohibitedAnimals.add(animal);
+    }
+
+    public String addAnimal(Creature animal) {
+        if (!prohibitedAnimals.contains(animal)) {
+            containedAnimals.add(animal);
+            return animal + " added to " + this.name;
+        } else return animal + " cannot be added to " + this.name + ": unsuitable terrain!";
     }
 
 }
