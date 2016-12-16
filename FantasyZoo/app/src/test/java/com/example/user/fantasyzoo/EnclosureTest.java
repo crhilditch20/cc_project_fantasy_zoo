@@ -40,9 +40,20 @@ public class EnclosureTest {
     }
 
     @Test
-    public void testSuccessfullyAddAnimal(){
+    public void testAddAnimal(){
         testEnclosure.addAnimal(dragon);
         assertEquals(1, testEnclosure.countAnimals());
+    }
+
+    @Test
+    public void testRemoveAnimal(){
+        testEnclosure.addAnimal(dragon);
+        assertEquals(1, testEnclosure.countAnimals());
+        String resultSuccess = testEnclosure.removeAnimal(dragon);
+        assertEquals("Smoky removed from enclosure",resultSuccess);
+        assertEquals(0, testEnclosure.countAnimals());
+        String resultFail = testEnclosure.removeAnimal(dragon);
+        assertEquals("Smoky is not in this enclosure...has it escaped??", resultFail);
     }
 
 

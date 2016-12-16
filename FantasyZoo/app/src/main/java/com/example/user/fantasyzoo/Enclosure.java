@@ -36,6 +36,14 @@ public class Enclosure {
         animals.add(animal);
     }
 
+    public String removeAnimal(Creature animal){
+        if (animals.contains(animal)) {
+            animals.remove(animal);
+            return animal.getName() + " removed from enclosure";
+        }
+        else return animal.getName() + " is not in this enclosure...has it escaped??";
+    }
+
 
 
 
