@@ -14,4 +14,12 @@ public abstract class Creature {
         return this.name;
     }
 
+    public String sleep(){
+        return "Zzzzz....";
+    }
+
+    public String eat(){
+        return "Nom nom nom...";
+    }
+
 }

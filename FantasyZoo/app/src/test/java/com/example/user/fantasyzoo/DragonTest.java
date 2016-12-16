@@ -30,4 +30,14 @@ public class DragonTest {
     public void testCanBreatheFire(){
         assertEquals("incinerates", dragon.breatheFire());
     }
+
+    @Test
+    public void testCanSleep(){
+        assertEquals("Zzzzz....", dragon.sleep());
+    }
+
+    @Test
+    public void testCanEat(){
+        assertEquals("Nom nom nom...", dragon.eat());
+    }
 }
