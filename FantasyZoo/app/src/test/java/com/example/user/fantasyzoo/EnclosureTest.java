@@ -14,7 +14,7 @@ public class EnclosureTest {
 
     @Before
     public void before(){
-        testEnclosure = new Enclosure("North Enclosure", "rock");
+        testEnclosure = new Enclosure("North Enclosure");
     }
 
     @Test
@@ -23,9 +23,13 @@ public class EnclosureTest {
     }
 
     @Test
-    public void testGetTerrain(){
-        assertEquals("rock", testEnclosure.getTerrain());
+    public void testSetTerrain(){
+        testEnclosure.setTerrain("closed", "rocky");
+        assertEquals("closed", testEnclosure.terrain.get("Roof"));
+        assertEquals("rocky", testEnclosure.terrain.get("Landscape"));
     }
+
+
 
 
 }
