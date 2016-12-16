@@ -21,6 +21,13 @@ public class ZooManagerTest {
     }
 
     @Test
+    public void testBuildEnclosure(){
+        Enclosure newEnclosure = new Enclosure("South Enclosure");
+        String result = manager.buildEnclosure(newEnclosure, "open", "water");
+        assertEquals("South Enclosure added", result);
+    }
+
+    @Test
     public void testSourceNewAnimal() {
         Unicorn unicorn = new Unicorn("Sparkles");
         Dragon dragon = new Dragon("Smoky");
