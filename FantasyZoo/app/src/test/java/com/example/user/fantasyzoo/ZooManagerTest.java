@@ -38,4 +38,19 @@ public class ZooManagerTest {
         assertEquals(2, manager.zoo.countAnimalsInHoldingPen());
     }
 
+    @Test
+    public void testMatchAnimalToEnclosure(){
+        Dragon dragon = new Dragon("Smoky");
+        Mermaid mermaid = new Mermaid("Ariel");
+        manager.sourceNewAnimal(dragon);
+        manager.sourceNewAnimal(mermaid);
+        Enclosure newEnclosure = new Enclosure("South Enclosure");
+        manager.buildEnclosure(newEnclosure, "open", "water");
+        String result1 = manager.matchAnimalToEnclosure("Smoky");
+        assertEquals("No suitable enclosure", result1);
+        String result2 = manager.matchAnimalToEnclosure("Ariel");
+        assertEquals("South Enclosure", result2);
+
+    }
+
 }

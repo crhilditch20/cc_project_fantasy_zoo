@@ -22,12 +22,16 @@ public class ZooManager {
         return animal.getName() + " is waiting for an enclosure. There is/are now " + newCount + " animal(s) in the holding pen";
     }
 
-    public void matchAnimalToEnclosure(String animalName){
+    public String matchAnimalToEnclosure(String animalName){
         Creature animalToMatch = zoo.getAnimalFromHoldingPen(animalName);
+        String suitableEnclosure = "No suitable enclosures";
         if (animalToMatch instanceof Flyable){
-
-
+            suitableEnclosure = zoo.searchEnclosures("closed");
         }
+        else if (animalToMatch instanceof Swimmable){
+           suitableEnclosure = zoo.searchEnclosures("water");
+        }
+        return suitableEnclosure;
     }
 
 }
