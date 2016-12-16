@@ -33,10 +33,10 @@ public class ZooTest {
 
     @Test
     public void testAddToHoldingPen(){
-        int resultBefore = zoo.countAnimalsInHoldingPen();
-        zoo.addAnimalToHoldingPen(dragon);
-        int resultAfter = zoo.countAnimalsInHoldingPen();
+        int resultBefore = this.zoo.countAnimalsInHoldingPen();
         assertEquals(0, resultBefore);
+        zoo.addAnimalToHoldingPen(dragon);
+        int resultAfter = this.zoo.countAnimalsInHoldingPen();
         assertEquals(1,resultAfter);
     }
 }

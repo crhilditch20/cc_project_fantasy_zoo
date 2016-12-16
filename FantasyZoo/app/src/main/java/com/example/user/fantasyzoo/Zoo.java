@@ -13,7 +13,7 @@ public class Zoo {
 
     public Zoo(String name){
         this.name = name;
-        this.enclosures = new ArrayList<Enclosure>();
+        this.enclosures = new ArrayList<>();
         this.holdingPen = new ArrayList<>();
     }
 
