@@ -12,11 +12,13 @@ public class ZooTest {
 
     Zoo zoo;
     Enclosure enclosure;
+    Dragon dragon;
 
     @Before
     public void before(){
         zoo = new Zoo("Imaginamals");
         enclosure = new Enclosure("West Enclosure");
+        dragon = new Dragon("Smoky");
     }
 
     @Test
@@ -27,5 +29,14 @@ public class ZooTest {
     @Test
     public void testAddEnclosure(){
         assertEquals("West Enclosure added", zoo.addEnclosure(enclosure));
+    }
+
+    @Test
+    public void testAddToHoldingPen(){
+        int resultBefore = zoo.countAnimalsInHoldingPen();
+        zoo.addAnimalToHoldingPen(dragon);
+        int resultAfter = zoo.countAnimalsInHoldingPen();
+        assertEquals(0, resultBefore);
+        assertEquals(1,resultAfter);
     }
 }

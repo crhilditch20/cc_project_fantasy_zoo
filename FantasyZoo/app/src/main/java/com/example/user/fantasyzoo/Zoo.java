@@ -9,10 +9,12 @@ public class Zoo {
 
     String name;
     ArrayList<Enclosure> enclosures;
+    ArrayList<Creature> holdingPen;
 
     public Zoo(String name){
         this.name = name;
         this.enclosures = new ArrayList<Enclosure>();
+        this.holdingPen = new ArrayList<>();
     }
 
     public String getName(){
@@ -22,6 +24,14 @@ public class Zoo {
     public String addEnclosure(Enclosure newEnclosure){
         enclosures.add(newEnclosure);
         return newEnclosure.getName() + " added";
+    }
+
+    public void addAnimalToHoldingPen(Creature animal){
+        holdingPen.add(animal);
+    }
+
+    public int countAnimalsInHoldingPen(){
+        return holdingPen.size();
     }
 }
 
