@@ -22,8 +22,12 @@ public class ZooManager {
         return animal.getName() + " is waiting for an enclosure. There is/are now " + newCount + " animal(s) in the holding pen";
     }
 
-    public void matchAnimalToEnclosure(Creature animal){
+    public void matchAnimalToEnclosure(String animalName){
+        Creature animalToMatch = zoo.getAnimalFromHoldingPen(animalName);
+        if (animalToMatch instanceof Flyable){
 
+
+        }
     }
 
 }

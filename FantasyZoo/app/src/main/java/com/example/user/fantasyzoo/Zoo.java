@@ -26,6 +26,19 @@ public class Zoo {
         return newEnclosure.getName() + " added";
     }
 
+    public String searchEnclosures(String condition){
+        String bestEnclosure = "No suitable enclosure";
+        for (Enclosure enclosure : enclosures){
+            if (enclosure.terrain.get("Roof").equals(condition)){
+                bestEnclosure = enclosure.getName();
+            }
+            else if (enclosure.terrain.get("Landscape").equals(condition)){
+                bestEnclosure = enclosure.getName();
+            }
+        }
+        return bestEnclosure;
+    }
+
     public void addAnimalToHoldingPen(Creature animal){
         holdingPen.add(animal);
     }

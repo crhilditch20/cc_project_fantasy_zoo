@@ -46,4 +46,13 @@ public class ZooTest {
         Creature animal = zoo.getAnimalFromHoldingPen("Smoky");
         assertEquals("Smoky", animal.getName());
     }
+
+    @Test
+    public void testSearchEnclosure(){
+        Enclosure enclosure1 = new Enclosure("North Enclosure");
+        enclosure1.setTerrain("closed", "rocky");
+        zoo.addEnclosure(enclosure1);
+        String result = zoo.searchEnclosures("closed");
+        assertEquals("North Enclosure", result);
+    }
 }
