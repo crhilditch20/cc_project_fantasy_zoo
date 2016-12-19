@@ -12,6 +12,7 @@ public class Zoo {
     ArrayList<Creature> holdingPen;
     BoxOffice boxOffice;
     ArrayList<Creature> escapees;
+    int totalIncome;
 
     public Zoo(String name){
         this.name = name;
@@ -19,6 +20,7 @@ public class Zoo {
         this.holdingPen = new ArrayList<>();
         this.boxOffice = new BoxOffice();
         this.escapees = new ArrayList<>();
+        this.totalIncome = 0;
     }
 
     public String getName(){
@@ -58,6 +60,14 @@ public class Zoo {
             }
         }
         return null;
+    }
+
+    public void setTotalIncome(int amount){
+        this.totalIncome += amount;
+    }
+
+    public int getTotalIncome(){
+        return this.totalIncome;
     }
 
 

@@ -30,11 +30,13 @@ public class ZooManagerTest {
     public void testSourceNewAnimal() {
         Unicorn unicorn = new Unicorn("Sparkles");
         Dragon dragon = new Dragon("Smoky");
-        String result1 = manager.sourceNewAnimal(unicorn);
-        String result2 = manager.sourceNewAnimal(dragon);
+        zoo.setTotalIncome(500);
+        String result1 = manager.sourceNewAnimal(unicorn, 100);
+        String result2 = manager.sourceNewAnimal(dragon, 200);
         System.out.println(result1);
         System.out.println(result2);
         assertEquals(2, manager.zoo.countAnimalsInHoldingPen());
+        assertEquals(200, zoo.getTotalIncome());
     }
 
 //    @Test

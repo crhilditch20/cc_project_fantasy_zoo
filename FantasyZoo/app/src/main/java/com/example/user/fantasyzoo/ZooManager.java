@@ -16,10 +16,14 @@ public class ZooManager {
         return zoo.addEnclosure(newEnclosure);
     }
 
-    public String sourceNewAnimal(Creature animal){
-        zoo.addAnimalToHoldingPen(animal);
-        int newCount = zoo.countAnimalsInHoldingPen();
-        return animal.getName() + " is waiting for an enclosure. There is/are now " + newCount + " animal(s) in the holding pen";
+    public String sourceNewAnimal(Creature animal, int price) {
+        int availableFunds = countIncome();
+        if (availableFunds > price) {
+            zoo.addAnimalToHoldingPen(animal);
+            int newCount = zoo.countAnimalsInHoldingPen();
+            zoo.totalIncome -= price;
+            return animal.getName() + " is waiting for an enclosure. There is/are now " + newCount + " animal(s) in the holding pen";
+        } else return "The zoo can't afford this animal!";
     }
 
     public String matchAnimalToEnclosure(String animalName){
@@ -36,6 +40,14 @@ public class ZooManager {
         }
         return suitableEnclosure;
     }
+
+
+    public int countIncome(){
+        int boxOfficeIncome = zoo.boxOffice.showIncome();
+        zoo.setTotalIncome(boxOfficeIncome);
+        return zoo.getTotalIncome();
+    }
+
 
 
 }

@@ -55,4 +55,10 @@ public class ZooTest {
         String result = zoo.searchEnclosures("closed");
         assertEquals("North Enclosure", result);
     }
+
+    @Test
+    public void testSetTotalIncome(){
+        zoo.setTotalIncome(100);
+        assertEquals(100, zoo.getTotalIncome());
+    }
 }

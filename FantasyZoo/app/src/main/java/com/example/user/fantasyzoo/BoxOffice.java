@@ -27,7 +27,8 @@ public class BoxOffice {
         pricing.put("Concession", concPrice);
     }
 
-    public int getPrice(String priceType){
+    public int getPrice(String priceType)
+    {
         return pricing.get(priceType).intValue();
     }
 
@@ -44,4 +45,5 @@ public class BoxOffice {
     public int showIncome(){
         return this.income;
     }
+
 }
