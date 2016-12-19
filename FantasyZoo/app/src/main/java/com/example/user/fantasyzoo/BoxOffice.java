@@ -11,10 +11,14 @@ public class BoxOffice {
     int capacity;
     int income;
 
-    public BoxOffice(int capacity){
+    public BoxOffice(){
         this.pricing = new HashMap();
-        this.capacity = capacity;
+        this.capacity = 0;
         this.income = 0;
+    }
+
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
     }
 
     public void setPricing(Integer fullPrice, Integer childPrice, Integer concPrice){
@@ -33,7 +37,7 @@ public class BoxOffice {
         income += (price * quantity);
     }
 
-    public int checkCapacity(){
+    public int getCapacity(){
         return this.capacity;
     }
 

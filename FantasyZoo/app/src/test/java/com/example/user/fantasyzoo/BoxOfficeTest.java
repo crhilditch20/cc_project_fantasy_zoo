@@ -14,8 +14,14 @@ public class BoxOfficeTest {
 
     @Before
     public void before() {
-        boxOffice = new BoxOffice(200);
+        boxOffice = new BoxOffice();
         boxOffice.setPricing(10, 5, 8);
+        boxOffice.setCapacity(200);
+    }
+
+    @Test
+    public void testSetCapacity(){
+        assertEquals(200, boxOffice.getCapacity());
     }
 
     @Test
@@ -31,7 +37,7 @@ public class BoxOfficeTest {
     @Test
     public void testSellTicket(){
         boxOffice.sellTicket(5, "Full");
-        assertEquals(195, boxOffice.checkCapacity());
+        assertEquals(195, boxOffice.getCapacity());
         assertEquals(50, boxOffice.showIncome());
     }
 

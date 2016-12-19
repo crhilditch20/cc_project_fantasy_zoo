@@ -13,11 +13,11 @@ public class Zoo {
     BoxOffice boxOffice;
     ArrayList<Creature> escapees;
 
-    public Zoo(String name, BoxOffice boxOffice){
+    public Zoo(String name){
         this.name = name;
         this.enclosures = new ArrayList<>();
         this.holdingPen = new ArrayList<>();
-        this.boxOffice = boxOffice;
+        this.boxOffice = new BoxOffice();
         this.escapees = new ArrayList<>();
     }
 
