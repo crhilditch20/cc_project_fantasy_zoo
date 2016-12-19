@@ -43,6 +43,12 @@ public class DragonTest {
     }
 
     @Test
+    public void testWillBurnVegFood(){
+        Food food = new Food("vegetarian");
+        assertEquals("incinerates", dragon.eat(food));
+    }
+
+    @Test
     public void testEscape(){
         assertEquals("Smoky is on the rampage!!", dragon.escape());
     }

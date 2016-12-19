@@ -70,7 +70,16 @@ public class Zoo {
         return this.totalIncome;
     }
 
-
+//    public String initiateRampage(){
+//        String escapeWarning = "";
+//        for (Enclosure enclosure : enclosures){
+//            for (Creature animal : enclosure.animals){
+//                escapeWarning = animal.escape();
+//            }
+//            return escapeWarning;
+//        }
+//        return "All is calm, no animals escaped...";
+//    }
 
 }
 

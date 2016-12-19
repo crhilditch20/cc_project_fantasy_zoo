@@ -16,4 +16,12 @@ public class Dragon extends Creature implements Flyable, Flammable {
     public String breatheFire(){
         return "incinerates";
     }
+
+    @Override
+    public String eat(Food food){
+        if (food.getType().equals("vegetarian")){
+            return breatheFire();
+        }
+        else return "Nom nom nom...";
+    }
 }

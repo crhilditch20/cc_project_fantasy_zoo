@@ -33,12 +33,12 @@ public class EnclosureTest {
     }
 
 
-//    @Test
-//    public void testSetTerrain(){
-//        testEnclosure.setTerrain("closed", "rocky");
-//        assertEquals("closed", testEnclosure.terrain.get("Roof"));
-//        assertEquals("rocky", testEnclosure.terrain.get("Landscape"));
-//    }
+    @Test
+    public void testSetTerrain(){
+        testEnclosure.setTerrain("open", "forest");
+        assertEquals("open", testEnclosure.terrain.get("Roof"));
+        assertEquals("forest", testEnclosure.terrain.get("Landscape"));
+    }
 
     @Test
     public void testCountAnimals(){
@@ -62,10 +62,6 @@ public class EnclosureTest {
         assertEquals("Smoky is not in this enclosure...has it escaped??", resultFail);
     }
 
-//    @Test
-//    public void testEscapeWarning(){
-//
-//    }
 
 
 

@@ -47,21 +47,20 @@ public class ZooManagerTest {
         assertEquals("The zoo can't afford this animal!", result);
     }
 
-//    @Test
-//    public void testMatchAnimalToEnclosure(){
-//        Dragon dragon = new Dragon("Smoky");
-//        Mermaid mermaid = new Mermaid("Ariel");
-//        manager.sourceNewAnimal(dragon);
-//        manager.sourceNewAnimal(mermaid);
-//        Enclosure newEnclosure = new Enclosure("South Enclosure");
-//        Enclosure newEnclosure2 = new Enclosure("West Enclosure");
-//        manager.buildEnclosure(newEnclosure, "open", "water");
-//        manager.buildEnclosure(newEnclosure2, "closed", "rocky");
-//        String result1 = manager.matchAnimalToEnclosure("Smoky");
-//        assertEquals("West Enclosure", result1);
-//        String result2 = manager.matchAnimalToEnclosure("Ariel");
-//        assertEquals("South Enclosure", result2);
-//
-//    }
+    @Test
+    public void testMatchAnimalToEnclosure(){
+        Dragon dragon = new Dragon("Smoky");
+        Mermaid mermaid = new Mermaid("Ariel");
+        zoo.setTotalIncome(100);
+        manager.sourceNewAnimal(dragon, 20);
+        manager.sourceNewAnimal(mermaid, 20);
+        manager.buildEnclosure("South Enclosure", "open", "water");
+        manager.buildEnclosure("West Enclosure", "closed", "rocky");
+        String result1 = manager.matchAnimalToEnclosure("Smoky");
+        assertEquals("West Enclosure", result1);
+        String result2 = manager.matchAnimalToEnclosure("Ariel");
+        assertEquals("South Enclosure", result2);
+
+    }
 
 }
