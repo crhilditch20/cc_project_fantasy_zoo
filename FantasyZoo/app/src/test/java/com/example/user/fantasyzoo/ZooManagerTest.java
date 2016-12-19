@@ -45,9 +45,11 @@ public class ZooManagerTest {
         manager.sourceNewAnimal(dragon);
         manager.sourceNewAnimal(mermaid);
         Enclosure newEnclosure = new Enclosure("South Enclosure");
+        Enclosure newEnclosure2 = new Enclosure("West Enclosure");
         manager.buildEnclosure(newEnclosure, "open", "water");
+        manager.buildEnclosure(newEnclosure2, "closed", "rocky");
         String result1 = manager.matchAnimalToEnclosure("Smoky");
-        assertEquals("No suitable enclosure", result1);
+        assertEquals("West Enclosure", result1);
         String result2 = manager.matchAnimalToEnclosure("Ariel");
         assertEquals("South Enclosure", result2);
 
