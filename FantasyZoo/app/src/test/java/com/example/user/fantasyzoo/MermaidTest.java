@@ -36,6 +36,11 @@ public class MermaidTest {
         Food food = new Food("fish");
         assertEquals("Nom nom nom...", mermaid.eat(food));
     }
+
+    @Test
+    public void testEscape(){
+        assertEquals("Ariel is out of the water and can't breathe - get help!", mermaid.escape());
+    }
 }
 
 

@@ -36,4 +36,9 @@ public class UnicornTest {
         Food food = new Food("vegetarian");
         assertEquals("Nom nom nom...", unicorn.eat(food));
     }
+
+    @Test
+    public void testEscape(){
+        assertEquals("Rainbow is on the rampage!!", unicorn.escape());
+    }
 }

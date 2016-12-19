@@ -22,4 +22,8 @@ public abstract class Creature {
         return "Nom nom nom...";
     }
 
+    public String escape(){
+        return this.name + " is on the rampage!!";
+    }
+
 }

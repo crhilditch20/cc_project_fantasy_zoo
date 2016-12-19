@@ -10,11 +10,15 @@ public class Zoo {
     String name;
     ArrayList<Enclosure> enclosures;
     ArrayList<Creature> holdingPen;
+    BoxOffice boxOffice;
+    ArrayList<Creature> escapees;
 
-    public Zoo(String name){
+    public Zoo(String name, BoxOffice boxOffice){
         this.name = name;
         this.enclosures = new ArrayList<>();
         this.holdingPen = new ArrayList<>();
+        this.boxOffice = boxOffice;
+        this.escapees = new ArrayList<>();
     }
 
     public String getName(){
@@ -55,6 +59,9 @@ public class Zoo {
         }
         return null;
     }
+
+
+
 }
 
 

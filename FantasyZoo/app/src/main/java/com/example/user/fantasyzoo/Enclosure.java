@@ -44,8 +44,11 @@ public class Enclosure {
         else return animal.getName() + " is not in this enclosure...has it escaped??";
     }
 
-
-
-
+    public String escapeWarning(){
+        for (Creature animal : animals ){
+            return animal.escape();
+        }
+        return null;
+    }
 
 }

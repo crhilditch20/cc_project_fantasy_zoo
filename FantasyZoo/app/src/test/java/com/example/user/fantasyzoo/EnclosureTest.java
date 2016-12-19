@@ -56,6 +56,11 @@ public class EnclosureTest {
         assertEquals("Smoky is not in this enclosure...has it escaped??", resultFail);
     }
 
+//    @Test
+//    public void testEscapeWarning(){
+//
+//    }
+
 
 
 

@@ -11,12 +11,14 @@ import static org.junit.Assert.*;
 public class ZooTest {
 
     Zoo zoo;
+    BoxOffice boxOffice;
     Enclosure enclosure;
     Dragon dragon;
 
     @Before
     public void before(){
-        zoo = new Zoo("Imaginamals");
+        boxOffice = new BoxOffice(200);
+        zoo = new Zoo("Imaginamals", boxOffice);
         enclosure = new Enclosure("West Enclosure");
         dragon = new Dragon("Smoky");
     }
