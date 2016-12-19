@@ -11,8 +11,8 @@ public class ZooManager {
         this.zoo = zoo;
     }
 
-    public String buildEnclosure(Enclosure newEnclosure, String roof, String landscape){
-        newEnclosure.setTerrain(roof, landscape);
+    public String buildEnclosure(String name, String roof, String landscape){
+        Enclosure newEnclosure = new Enclosure(name, roof, landscape);
         return zoo.addEnclosure(newEnclosure);
     }
 

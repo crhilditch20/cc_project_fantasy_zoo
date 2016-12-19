@@ -18,7 +18,7 @@ public class EnclosureTest {
 
     @Before
     public void before(){
-        testEnclosure = new Enclosure("North Enclosure");
+        testEnclosure = new Enclosure("North Enclosure", "open", "water");
         dragon = new Dragon("Smoky");
     }
 
@@ -28,11 +28,17 @@ public class EnclosureTest {
     }
 
     @Test
-    public void testSetTerrain(){
-        testEnclosure.setTerrain("closed", "rocky");
-        assertEquals("closed", testEnclosure.terrain.get("Roof"));
-        assertEquals("rocky", testEnclosure.terrain.get("Landscape"));
+    public void testGetTerrain(){
+        assertEquals("open", testEnclosure.getTerrain("Roof"));
     }
+
+
+//    @Test
+//    public void testSetTerrain(){
+//        testEnclosure.setTerrain("closed", "rocky");
+//        assertEquals("closed", testEnclosure.terrain.get("Roof"));
+//        assertEquals("rocky", testEnclosure.terrain.get("Landscape"));
+//    }
 
     @Test
     public void testCountAnimals(){

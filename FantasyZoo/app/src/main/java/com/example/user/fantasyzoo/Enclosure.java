@@ -12,15 +12,20 @@ public class Enclosure {
     HashMap<String, String> terrain;
     ArrayList<Creature> animals;
 
-    public Enclosure(String name) {
+    public Enclosure(String name, String roof, String landscape) {
         this.name = name;
         this.terrain = new HashMap<String, String>();
         this.animals = new ArrayList<Creature>();
+        setTerrain(roof, landscape);
     }
 
 
     public String getName(){
         return this.name;
+    }
+
+    public String getTerrain(String key){
+        return this.terrain.get(key);
     }
 
     public void setTerrain(String roof, String landscape){
