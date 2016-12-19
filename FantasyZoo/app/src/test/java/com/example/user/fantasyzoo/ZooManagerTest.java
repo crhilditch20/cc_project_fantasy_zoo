@@ -27,7 +27,7 @@ public class ZooManagerTest {
     }
 
     @Test
-    public void testSourceNewAnimal() {
+    public void testSourceNewAnimalSuccess() {
         Unicorn unicorn = new Unicorn("Sparkles");
         Dragon dragon = new Dragon("Smoky");
         zoo.setTotalIncome(500);
@@ -37,6 +37,14 @@ public class ZooManagerTest {
         System.out.println(result2);
         assertEquals(2, manager.zoo.countAnimalsInHoldingPen());
         assertEquals(200, zoo.getTotalIncome());
+    }
+
+    @Test
+    public void testSourceNewAnimalFailure(){
+        Unicorn unicorn = new Unicorn("Sparkles");
+        zoo.setTotalIncome(100);
+        String result = manager.sourceNewAnimal(unicorn, 200);
+        assertEquals("The zoo can't afford this animal!", result);
     }
 
 //    @Test
