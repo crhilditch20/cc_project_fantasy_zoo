@@ -21,12 +21,6 @@ public class ZooManagerTest {
     }
 
     @Test
-    public void testBuildEnclosure(){
-        String result = manager.buildEnclosure("South Enclosure", "open", "water");
-        assertEquals("South Enclosure added", result);
-    }
-
-    @Test
     public void testSourceNewAnimalSuccess() {
         Unicorn unicorn = new Unicorn("Sparkles");
         Dragon dragon = new Dragon("Smoky");
@@ -54,8 +48,10 @@ public class ZooManagerTest {
         zoo.setTotalIncome(100);
         manager.sourceNewAnimal(dragon, 20);
         manager.sourceNewAnimal(mermaid, 20);
-        manager.buildEnclosure("South Enclosure", "open", "water");
-        manager.buildEnclosure("West Enclosure", "closed", "rocky");
+        Enclosure enclosure1 = new Enclosure("South Enclosure", "open", "water");
+        Enclosure enclosure2 = new Enclosure("West Enclosure", "closed", "rocky");
+        zoo.addEnclosure(enclosure1);
+        zoo.addEnclosure(enclosure2);
         String result1 = manager.matchAnimalToEnclosure("Smoky");
         assertEquals("West Enclosure", result1);
         String result2 = manager.matchAnimalToEnclosure("Ariel");

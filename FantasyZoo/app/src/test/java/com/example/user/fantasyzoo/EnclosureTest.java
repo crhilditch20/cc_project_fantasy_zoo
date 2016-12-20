@@ -61,6 +61,6 @@ public class EnclosureTest {
         String resultFail = testEnclosure.removeAnimal(dragon);
         assertEquals("Smoky is not in this enclosure...has it escaped??", resultFail);
     }
-    
+
 
 }
