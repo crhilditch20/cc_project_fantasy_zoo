@@ -20,12 +20,15 @@ class Runner{
     System.out.println("Now you'll need some animals...here's the animal shopping list at MythicalBeastsDirect.com: Dragon £900, Unicorn £700, Mermaid £1200. Which would you like to buy?");
     String userChoice = System.console().readLine();
       if (userChoice.equals("Dragon")){
+        Creature chosenAnimal = dragon;
         System.out.println(zooManager.sourceNewAnimal(dragon, 900));
       }
       else if (userChoice.equals("Unicorn")){
+        Creature chosenAnimal = unicorn;
         System.out.println(zooManager.sourceNewAnimal(unicorn, 700));
       }
       else if (userChoice.equals("Mermaid")){
+        Creature chosenAnimal = mermaid;
         System.out.println(zooManager.sourceNewAnimal(mermaid, 1200));
       }
       else System.out.println("That animal isn't available to buy...");
@@ -33,9 +36,11 @@ class Runner{
       System.out.println("Now you need to add your new animal to an enclosure. Enter your new animal's name to match them to an enclosure.");
       String animalName = System.console().readLine();
       String enclosureName = zooManager.matchAnimalToEnclosure(animalName);
-        System.out.println("The best enclosure is: " + enclosureName)". Type 'add' to add animal to this enclosure.");
+        System.out.println("The best enclosure is: " + enclosureName + ". Type 'add' to add animal to this enclosure.");
         System.console().readLine();
-      
+        Enclosure enclosureForAnimal = zoo.searchEnclosureByName(enclosureName);
+        enclosureForAnimal.addAnimal(chosenAnimal);
+
 
        
 
