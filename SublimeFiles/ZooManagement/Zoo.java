@@ -13,7 +13,7 @@ public class Zoo {
         this.enclosures = new ArrayList<>();
         this.holdingPen = new ArrayList<>();
         this.boxOffice = new BoxOffice();
-        this.totalIncome = 1000;
+        this.totalIncome = 1500;
     }
 
     public String getName(){

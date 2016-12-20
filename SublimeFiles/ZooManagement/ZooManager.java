@@ -31,11 +31,12 @@ public class ZooManager {
         return suitableEnclosure;
     }
 
-    public void moveAnimalToEnclosure(String animalName, String enclosureName){
+    public String moveAnimalToEnclosure(String animalName, String enclosureName){
         Creature animalToMove = zoo.getAnimalFromHoldingPen(animalName);
         Enclosure enclosure = zoo.searchEnclosureByName(enclosureName);
         enclosure.addAnimal(animalToMove);
         zoo.holdingPen.remove(animalToMove);
+        return animalName + " is settling into " + enclosureName;
     }
 
     public int countIncome(){
