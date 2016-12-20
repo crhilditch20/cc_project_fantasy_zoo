@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/build_zoo"
+        android:textSize="25dp"
+        android:text="Add some enclosures to your zoo!"
+        android:layout_marginTop="5dp"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/dragon_enclosure"
+        android:text="@string/dragon_enclosure"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:background="#bf80ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/unicorn_enclosure"
+        android:text="@string/unicorn_enclosure"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:background="#bf80ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/mermaid_enclosure"
+        android:text="@string/mermaid_enclosure"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:background="#bf80ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/continue_build"
+        android:text="@string/continue_build"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:background="#bf80ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

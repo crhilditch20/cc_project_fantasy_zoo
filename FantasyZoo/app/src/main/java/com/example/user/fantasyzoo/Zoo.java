@@ -11,7 +11,6 @@ public class Zoo {
     ArrayList<Enclosure> enclosures;
     ArrayList<Creature> holdingPen;
     BoxOffice boxOffice;
-    ArrayList<Creature> escapees;
     int totalIncome;
 
     public Zoo(String name){
@@ -19,8 +18,7 @@ public class Zoo {
         this.enclosures = new ArrayList<>();
         this.holdingPen = new ArrayList<>();
         this.boxOffice = new BoxOffice();
-        this.escapees = new ArrayList<>();
-        this.totalIncome = 0;
+        this.totalIncome = 1000;
     }
 
     public String getName(){
@@ -70,16 +68,14 @@ public class Zoo {
         return this.totalIncome;
     }
 
-//    public String initiateRampage(){
-//        String escapeWarning = "";
-//        for (Enclosure enclosure : enclosures){
-//            for (Creature animal : enclosure.animals){
-//                escapeWarning = animal.escape();
-//            }
-//            return escapeWarning;
-//        }
-//        return "All is calm, no animals escaped...";
-//    }
+    public String initiateRampage(){
+        for (Enclosure enclosure : enclosures){
+            for (Creature animal : enclosure.animals){
+                return animal.escape();
+            }
+        }
+        return "All is calm, no animals escaped...";
+    }
 
 }
 

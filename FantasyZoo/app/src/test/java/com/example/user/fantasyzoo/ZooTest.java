@@ -62,15 +62,11 @@ public class ZooTest {
         assertEquals(100, zoo.getTotalIncome());
     }
 
-//    @Test
-//    public void testInitiateRampage(){
-//        Enclosure enclosure1 = new Enclosure("North Enclosure", "open", "water");
-//        Enclosure enclosure2 = new Enclosure("South Enclosure", "closed", "rocky");
-//        zoo.addEnclosure(enclosure1);
-//        zoo.addEnclosure(enclosure2);
-//        Mermaid mermaid = new Mermaid("Ariel");
-//        enclosure1.addAnimal(mermaid);
-//        enclosure2.addAnimal(dragon);
-//        System.out.println(zoo.initiateRampage());
-//    }
+    @Test
+    public void testInitiateRampage(){
+        Enclosure enclosure2 = new Enclosure("South Enclosure", "closed", "rocky");
+        zoo.addEnclosure(enclosure2);
+        enclosure2.addAnimal(dragon);
+        System.out.println(zoo.initiateRampage());
+    }
 }

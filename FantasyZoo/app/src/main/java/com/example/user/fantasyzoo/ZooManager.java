@@ -41,7 +41,6 @@ public class ZooManager {
         return suitableEnclosure;
     }
 
-
     public int countIncome(){
         int boxOfficeIncome = zoo.boxOffice.showIncome();
         zoo.setTotalIncome(boxOfficeIncome);
