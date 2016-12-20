@@ -59,7 +59,7 @@ public class ZooTest {
     @Test
     public void testSetTotalIncome(){
         zoo.setTotalIncome(100);
-        assertEquals(100, zoo.getTotalIncome());
+        assertEquals(1100, zoo.getTotalIncome());
     }
 
     @Test

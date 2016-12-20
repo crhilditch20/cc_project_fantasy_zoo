@@ -24,20 +24,18 @@ public class ZooManagerTest {
     public void testSourceNewAnimalSuccess() {
         Unicorn unicorn = new Unicorn("Sparkles");
         Dragon dragon = new Dragon("Smoky");
-        zoo.setTotalIncome(500);
         String result1 = manager.sourceNewAnimal(unicorn, 100);
         String result2 = manager.sourceNewAnimal(dragon, 200);
         System.out.println(result1);
         System.out.println(result2);
         assertEquals(2, manager.zoo.countAnimalsInHoldingPen());
-        assertEquals(200, zoo.getTotalIncome());
+        assertEquals(700, zoo.getTotalIncome());
     }
 
     @Test
     public void testSourceNewAnimalFailure(){
         Unicorn unicorn = new Unicorn("Sparkles");
-        zoo.setTotalIncome(100);
-        String result = manager.sourceNewAnimal(unicorn, 200);
+        String result = manager.sourceNewAnimal(unicorn, 1200);
         assertEquals("The zoo can't afford this animal!", result);
     }
 
@@ -45,9 +43,8 @@ public class ZooManagerTest {
     public void testMatchAnimalToEnclosure(){
         Dragon dragon = new Dragon("Smoky");
         Mermaid mermaid = new Mermaid("Ariel");
-        zoo.setTotalIncome(100);
-        manager.sourceNewAnimal(dragon, 20);
-        manager.sourceNewAnimal(mermaid, 20);
+        manager.sourceNewAnimal(dragon, 200);
+        manager.sourceNewAnimal(mermaid, 200);
         Enclosure enclosure1 = new Enclosure("South Enclosure", "open", "water");
         Enclosure enclosure2 = new Enclosure("West Enclosure", "closed", "rocky");
         zoo.addEnclosure(enclosure1);
