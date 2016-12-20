@@ -27,7 +27,7 @@ public class Zoo {
 
     public String addEnclosure(Enclosure newEnclosure){
         enclosures.add(newEnclosure);
-        return newEnclosure.getName() + " added";
+        return newEnclosure.getName() + " added and ready for animals!";
     }
 
     public String searchEnclosures(String condition){

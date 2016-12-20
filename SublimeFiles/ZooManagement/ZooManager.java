@@ -13,7 +13,7 @@ public class ZooManager {
             int newCount = zoo.countAnimalsInHoldingPen();
             zoo.totalIncome -= price;
             return animal.getName() + " is waiting for an enclosure. There is/are now " + newCount + " animal(s) in the holding pen";
-        } else return "The zoo can't afford this animal!";
+        } else return "The zoo can't afford this animal! You currently have £" + zoo.totalIncome + " in the bank";
     }
 
     public String matchAnimalToEnclosure(String animalName){
