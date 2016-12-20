@@ -32,7 +32,11 @@ class Runner{
       
       System.out.println("Now you need to add your new animal to an enclosure. Enter your new animal's name to match them to an enclosure.");
       String animalName = System.console().readLine();
-        System.out.println(zooManager.matchAnimalToEnclosure(animalName));
+      String enclosureName = zooManager.matchAnimalToEnclosure(animalName);
+        System.out.println("The best enclosure is: " + enclosureName)". Type 'add' to add animal to this enclosure.");
+        System.console().readLine();
+      
+
        
 
   }

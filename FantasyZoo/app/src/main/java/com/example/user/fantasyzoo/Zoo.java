@@ -30,6 +30,14 @@ public class Zoo {
         return newEnclosure.getName() + " added and ready for animals!";
     }
 
+    public Enclosure searchEnclosureByName(String name){
+        for (Enclosure enclosure : enclosures){
+            if (enclosure.getName().equals(name)){
+                return enclosure;
+            }
+        } return null;
+    }
+
     public String searchEnclosures(String condition){
         String bestEnclosure = "No suitable enclosure";
         for (Enclosure enclosure : enclosures){

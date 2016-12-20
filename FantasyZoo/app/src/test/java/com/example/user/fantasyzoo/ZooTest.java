@@ -49,6 +49,14 @@ public class ZooTest {
     }
 
     @Test
+    public void testSearchEnclosureByName(){
+        Enclosure enclosure1 = new Enclosure("North Enclosure", "closed", "rocky");
+        zoo.addEnclosure(enclosure1);
+        Enclosure enclosureFound = zoo.searchEnclosureByName("North Enclosure");
+        assertEquals("closed", enclosureFound.getTerrain("Roof"));
+    }
+
+    @Test
     public void testSearchEnclosure(){
         Enclosure enclosure1 = new Enclosure("North Enclosure", "closed", "rocky");
         zoo.addEnclosure(enclosure1);
