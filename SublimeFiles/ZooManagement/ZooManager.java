@@ -22,7 +22,7 @@ public class ZooManager {
         if (animalToMatch instanceof Flyable){
             suitableEnclosure = zoo.searchEnclosures("closed");
         }
-        else if (animalToMatch instanceof Flammable){
+        if (animalToMatch instanceof Flammable){
             suitableEnclosure = zoo.searchEnclosures("rocky");
         }
         else if (animalToMatch instanceof Swimmable){
