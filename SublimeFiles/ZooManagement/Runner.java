@@ -4,9 +4,9 @@ class Runner{
   public static void main(String[] args) {
     Zoo zoo = new Zoo("Imaginimals");
     ZooManager zooManager = new ZooManager(zoo);
-    Dragon dragon = new Dragon("Smoky");
-    Unicorn unicorn = new Unicorn("Sparkles");
-    Mermaid mermaid = new Mermaid("Ariel");
+    Dragon dragon = new Dragon("Smoky the Dragon");
+    Unicorn unicorn = new Unicorn("Sparkles the Unicorn");
+    Mermaid mermaid = new Mermaid("Ariel the Mermaid");
 
     System.out.println("Welcome to " + zoo.getName() + "! As Zoo Manager you have some work to do...");
 
@@ -28,7 +28,7 @@ class Runner{
       System.out.println("Now choose an open or closed roof.");
       String roof2 = System.console().readLine();
       Enclosure newEnclosure2 = new Enclosure(newEnclosureName2, roof2, landscape2);
-      System.out.println(zoo.addEnclosure(newEnclosure));
+      System.out.println(zoo.addEnclosure(newEnclosure2));
 
       System.out.println("Now you'll need some animals...here's the animal shopping list at MythicalBeastsDirect.com: Dragon £900, Unicorn £700, Mermaid £1200. Type 'bank' to see how much money the zoo has in the bank.");
       System.console().readLine();
@@ -68,14 +68,14 @@ class Runner{
         System.out.println("Now choose an open or closed roof");
         String newRoof = System.console().readLine();
         Enclosure anotherEnclosure = new Enclosure(anotherEnclosureName, newRoof, newLandscape);
-        System.out.println(zoo.addEnclosure(anotherEnclosure) + ". Type 'add' to add animal to this enclosure.");
+        System.out.println(zoo.addEnclosure(anotherEnclosure) + " Type 'add' to add animal to this enclosure.");
         System.console().readLine();
-        System.out.println(zooManager.moveAnimalToEnclosure(animalName, enclosureName));
+        System.out.println(zooManager.moveAnimalToEnclosure(animalName, anotherEnclosureName));
       }
         System.out.println("Time to feed your animal! Think what your animal might like to eat and type it here:");
         Food food = new Food(System.console().readLine());
         System.out.println(userAnimal.eat(food));
-
+        System.out.println("uh oh..." + zoo.initiateRampage());
        
 
   }
