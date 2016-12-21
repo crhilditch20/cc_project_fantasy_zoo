@@ -29,7 +29,7 @@ public class ZooTest {
 
     @Test
     public void testAddEnclosure() {
-        assertEquals("West Enclosure added", zoo.addEnclosure(enclosure));
+        assertEquals("West Enclosure added and ready for animals!", zoo.addEnclosure(enclosure));
     }
 
     @Test
