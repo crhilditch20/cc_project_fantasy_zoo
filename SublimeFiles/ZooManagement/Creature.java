@@ -1,5 +1,5 @@
 public abstract class Creature {
-    String name;
+    private String name;
 
     public Creature(String name){
         this.name = name;

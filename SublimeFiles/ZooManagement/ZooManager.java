@@ -16,7 +16,6 @@ public class ZooManager {
         } else return "The zoo can't afford this animal! You currently have £" + zoo.totalIncome + " in the bank";
     }
     
-//this one isn't actually working fully...it doesn't catch if an animal is an instance of more than one interface
     public String matchAnimalToEnclosure(String animalName){
         Creature animalToMatch = zoo.getAnimalFromHoldingPen(animalName);
         String suitableEnclosure = "No suitable enclosures";
